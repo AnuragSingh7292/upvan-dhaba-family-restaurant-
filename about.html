@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>उपवन ढाबा & फैमिली रेस्टोरेंट</title>
+    <link rel="icon" href="image/upvan-icon.png" type="image/x-icon">
+    <link rel="stylesheet" href="about.css">
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="logo">उपवन ढाबा & फैमिली रेस्टोरेंट</div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="menu.html">Menu</a></li>
+                <li><a href="index.html#gallery">Gallery</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h1>About Us</h1>
+        <p>
+            At उपवन ढाबा & फैमिली रेस्टोरेंट, we take pride in being more than just a place to eat – we are a
+            destination for delicious meals and happy memories. Established in 2020 by Shubham Singh, our goal has
+            always been to bring people together with great food and friendly service. Located in the heart of the city,
+            our restaurant blends traditional recipes with a modern touch, making every visit special.
+        </p>
+        <p>
+            Our menu is carefully designed to offer something for everyone. From comforting home-style meals to exciting
+            flavors from different cuisines, every dish is made with fresh ingredients and love. Whether you're stopping
+            by for a quick meal, a family dinner, or a celebration, we make sure you have a wonderful experience.
+        </p>
+        <p>
+            Shubham Singh, the founder of Upvan Dhaba, dreamed of creating a warm and welcoming place where people
+            can enjoy food that feels like home. With his passion and dedication, he has built a restaurant that is
+            loved by people of all ages.
+        </p>
+        <p>
+            Since we started, उपवन ढाबा & फैमिली रेस्टोरेंट has become a favorite spot for food lovers. From
+            delicious Indian curries to spicy Chinese dishes and hearty Continental meals, we have something for every
+            taste. We believe in not just serving food but creating moments that stay with you long after your visit.
+        </p>
+        <p>
+            Visit us and enjoy a special dining experience with your loved ones. We are excited to serve you and welcome
+            you to the Upvan Dhaba family.
+        </p>
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact">
+            <div class="addres">
+                <h2>Get in Touch</h2>
+                <p>Feel free to visit us at Upvan Dhaba & Family Restaurant, located in NH 139 Obra, Aranda, Aurangabad,
+                    Bihar(824113).</p>
+                <p>📞 Call us at: +91 729 2948 605</p>
+                <p>📞 Call us at: +91 620 7923 566</p>
+                <p>📞 Call us at: +91 222 666 444</p>
+                <p>📞 Call us at: +91 222 666 444</p>
+            </div>
+            <div class="response">
+                <h2>We Value Your Feedback</h2>
+                <form action="https://formspree.io/f/mdkovyzl" method="POST" id="feedback-form" onsubmit="clearForm()">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" placeholder="Enter your name" required>
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" placeholder="Write your valuable feedback"></textarea required>
+                <button type="submit">Send</button>
+            </form>
+        </div>
+    </section>
+
+    </main>
+    <footer>           
+        <p>&copy; 2024 Upvan Dhaba. All Rights Reserved. Design By Anurag Singh</p>
+    </footer>
+
+    <script>
+        function clearForm() {
+            // Delay clearing to allow submission to Formspree
+            setTimeout(() => {
+                document.getElementById('feedback-form').reset();
+            }, 100); // Slight delay to allow form submission
+        }
+    </script>
+</body>
+
+</html>

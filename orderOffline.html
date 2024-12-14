@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>उपवन ढाबा & फैमिली रेस्टोरेंट</title>
+    <link rel="icon" href="image/upvan-icon.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="order.css">
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="logo">उपवन ढाबा & फैमिली रेस्टोरेंट</div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="menu.html">Menu</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Order Section -->
+    <section class="order-section">
+        <h2>Your Order</h2>
+
+        <!-- Display the ordered item -->
+        <div class="order-details">
+            <img id="order-image" src="" alt="Order Image">
+            <h3 id="order-name">Dish Name</h3>
+            <p>Price: ₹<span id="order-price">0</span></p>
+        </div>
+
+        <form id="order-form" action="https://formspree.io/f/mdkovyzl" method="POST">
+            <label for="name">Your Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="table-number">Table Number:</label>
+            <input type="number" id="table-number" name="table-number" min="1" max="15" required>
+
+            <label for="quantity">Total Quantity:</label>
+            <input type="number" id="quantity" name="quantity" min="1" max="10" required>
+
+            <!-- hidden field -->
+            <input type="hidden" name="dishName" id="hidden-dishName">
+            <input type="hidden" name="price" id="hidden-price">
+            <input type="hidden" name="totalPrice" id="hidden-totalPrice">
+            <input type="hidden" name="tokenNumber" id="hidden-tokenNumber">
+
+            <button type="submit">Place Order</button>
+        </form>
+        <p id="token-info" style="display:none;">Your Token Number: <span id="token-number"></span></p>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <p>&copy; 2024 Upvan Dhaba. All rights reserved. Design By Anurag Singh</p>
+        </div>
+    </footer>
+    <script src="orderOffline.js"></script>
+    <!-- <script src="https://cdn.emailjs.com/dist/email.min.js"></script> -->
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+
+
+</body>
+
+</html>

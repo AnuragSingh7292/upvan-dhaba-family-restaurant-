@@ -1,0 +1,215 @@
+/* Global styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Body and background styles */
+body {
+    /* background-image: url(image/about-img.jpg); */
+    background-color: #f9f9f9;
+    color: #333;
+    line-height: 1.6;
+    /* padding: 20px; */
+}
+
+/* Header styles */
+.header {
+    background-color: #183047;
+    padding: 10px;
+    text-align: center;
+    /* position: fixed; */
+    /*Fix the header to the top */
+    /* top: 0;
+    left: 0;
+    width: 100%;
+    /* z-index: 1000; 
+    /*Ensure header stays on top of other content */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    /* Optional shadow for effect */
+}
+
+.header .logo {
+    font-family: Georgia, serif;
+    color: #ffffff;
+    font-size: 40px;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 5px;
+    margin-top: 5px;
+}
+
+.header nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+}
+
+.header nav ul li {
+    margin: 0 20px;
+}
+
+.header nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s;
+}
+
+.header nav ul li a:hover {
+    color: #a9a698;
+    font-weight: bold;
+    /* Golden color on hover */
+}
+
+/* Order Section Styles */
+.order-section {
+    background-color: #fff;
+    /* width: 500px; */
+    max-width: 700px;
+    margin: 40px auto;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.order-section h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #5D4037;
+    /* Same brown from header */
+}
+
+/* Order Details */
+.order-details {
+    margin-bottom: 20px;
+}
+
+#order-image {
+    width: 50%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+#order-name {
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+#order-price {
+    font-size: 18px;
+    color: #e65100;
+    /* Dark orange for pricing */
+}
+#delivery-charge{
+    font-size: 16px;
+    color: #e65100
+}
+
+/* Form Styles */
+#order-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0px;
+}
+
+#order-form label {
+    font-size: 18px;
+    margin-bottom: 5px;
+    color: #5D4037;
+    text-align: left;
+    /* Ensure alignment is left */
+    display: block;
+    /* Makes the label occupy the full width */
+    align-self: flex-start;
+    /* Align the label to the left */
+}
+
+#order-form input {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+
+#order-form input:focus {
+    border-color: #FF5722;
+    /* Red border on focus */
+    outline: none;
+}
+
+#order-form button {
+    background-color: #FF5722;
+    /* Bold red for the button */
+    color: #fff;
+    padding: 15px 25px;
+    border: none;
+    border-radius: 8px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#order-form button:hover {
+    background-color: #d84315;
+    /* Darker red on hover */
+}
+
+/* Token Info Section */
+#token-info {
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 20px;
+    color: #388E3C;
+    /* Green color for confirmation */
+}
+
+#token-number {
+    font-size: 24px;
+    color: #FF5722;
+    /* Red token number */
+}
+
+/* Footer */
+.footer {
+    background-color: #2c3e50;
+    color: white;
+    padding: 20px;
+    display: flex;
+    text-align: center;
+}
+
+.footer .footer-content {
+    flex: 1;
+    justify-content: center;
+}
+
+
+@media only screen and (max-width: 768px) {
+    .header .logo {
+        font-size: 30px;
+    }
+    
+    .header nav ul li {
+        margin: 0 10px;
+    }
+    
+    .header nav ul li a {
+        color: white;
+        text-decoration: none;
+        font-size: 18px;
+        font-weight: bold;
+        transition: color 0.3s;
+    }
+}

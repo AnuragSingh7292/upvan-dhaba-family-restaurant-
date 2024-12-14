@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="image/upvan-icon.png" type="image/x-icon">
+    <title>Order Preference</title>
+    <link rel="icon" href="image/upvan-icon.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="order.css">
+    <style>
+        body {
+            background-image: url(image/about-img.jpg);
+        }
+
+        /* Order Section Styles */
+        .choice-section {
+            background-color: #fff;
+            /* width: 500px; */
+            max-width: 400px;
+            margin: 10px auto;
+            padding: 60px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            /* margin-bottom: 20px; */
+        }
+
+        h1 {
+            font-size: 2rem;
+            color: #4a4d66;
+            text-align: center;
+        }
+
+        .btn {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 100px;
+            margin-bottom: 10px;
+            /* background-color: red; */
+            /* gap: 20px; */
+        }
+
+        button {
+            font-weight: bold;
+            margin: 10px;
+            padding: 12px 20px;
+            font-size: 1rem;
+            color: #fff;
+            background-color: #ff0000;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #ae4444;
+        }
+
+        @media only screen and (max-width: 768px) {
+            .choice-section {
+                max-width: 290px;
+                margin: 47px auto;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="logo">उपवन ढाबा & फैमिली रेस्टोरेंट</div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="menu.html">Menu</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section class="choice-section">
+        <h1>Choose Order Mode</h1>
+        <div class="btn">
+            <button onclick="redirectOrder('online')">Online</button>
+            <button onclick="redirectOrder('offline')">Offline</button>
+        </div>
+    </section>
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <p>&copy; 2024 Upvan Dhaba. All rights reserved. Design By Anurag Singh</p>
+        </div>
+    </footer>
+
+    <script>
+        function redirectOrder(mode) {
+            if (mode === 'online') {
+                window.location.href = 'orderOnline.html';
+            } else if (mode === 'offline') {
+                window.location.href = 'orderOffline.html';
+            }
+        }
+    </script>
+</body>
+
+</html>

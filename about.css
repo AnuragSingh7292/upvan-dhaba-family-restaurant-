@@ -1,0 +1,183 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #e6eced;
+    /* Warm beige background */
+    margin: 0;
+    padding: 0;
+}
+
+.header {
+    background-color: #183047;
+    /* Chocolate brown */
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+}
+
+.header .logo {
+    font-family: Georgia, serif;
+    color: white;
+    font-size: 40px;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 5px;
+    margin-top: 5px;
+}
+
+.header nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+}
+
+.header nav ul li {
+    margin: 0 20px;
+}
+
+.header nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s;
+}
+
+.header nav ul li a:hover {
+    font-weight: bold;
+}
+
+main {
+    padding: 20px;
+    max-width: 800px;
+    margin: auto;
+    line-height: 1.6;
+}
+
+h1 {
+    text-align: left;
+    color: #dd0b0b;
+    /* Saddle brown */
+}
+
+p {
+    color: #2e2a2a;
+    font-size: 18px;
+    text-align: justify;
+}
+
+.contact {
+    padding: 5px;
+    text-align: left;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 0px;
+    /* Removes additional spacing between elements */
+}
+
+.contact>div {
+    flex: 1;
+    /* Ensures equal width for all three sections */
+    margin: 0;
+    /* Removes any default margin that could cause gaps */
+    padding: 0px;
+    /* Optional: Adjust for internal spacing */
+}
+
+.contact h2 {
+    font-family: cursive;
+    font-size: 32px;
+    margin-bottom: 20px;
+    color: #2c3e50;
+}
+
+.contact p {
+    text-align: left;
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.contact form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+.contact label {
+    font-size: 18px;
+    text-align: left;
+    width: 100%;
+    color: #333;
+}
+
+.contact input,
+.contact textarea {
+    width: 95%;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    margin-bottom: 10px;
+}
+
+.contact button {
+    background-color: #2c3e50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.contact button:hover {
+    background-color: #3498db;
+}
+
+
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #2c3e50;
+    color: white;
+    /* position: fixed; */
+    bottom: 0;
+    width: auto;
+}
+
+footer p {
+    /* margin-right: 30px; */
+    color: white;
+    text-align: center;
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+
+@media only screen and (max-width: 768px) {
+    .header .logo {
+        font-size: 30px;
+        margin-top: 10px;
+    }
+
+    .contact {
+        display: flex;
+        flex-direction: column;
+        /* align-items: center; */
+        gap: 20px;
+    }
+
+    .header nav ul li {
+        margin: 0 10px;
+    }
+
+    .header nav ul li a {
+        color: white;
+        text-decoration: none;
+        font-size: 18px;
+        font-weight: bold;
+        transition: color 0.3s;
+    }
+}

@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>उपवन ढाबा & फैमिली रेस्टोरेंट</title>
+    <link rel="icon" href="image/upvan-icon.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="menu.css">
+</head>
+
+<body>
+    <!-- Loading Screen -->
+    <div id="loading-overlay">
+        <div class="loader"></div>
+    </div>
+    <!-- Rotating loader during blur effect -->
+    <div id="blur-overlay" style="display: none;">
+        <div class="blur-loader"></div>
+    </div>
+
+
+    <!-- Header -->
+    <header class="header">
+        <div class="logo">उपवन ढाबा & फैमिली रेस्टोरेंट</div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="index.html#gallery">Gallery</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="menu-name">
+        <h1>Our Menu</h1>
+    </div>
+    <div class="search">
+        <input type="text" id="search-input" required>
+        <button id="search-btn">Search</button>
+        <i id="search-icon" class="fas fa-search"></i>
+    </div>
+    <!-- Veg Category -->
+    <section class="items">
+        <div class="container veg" id="veg">
+            <h2 class="name">Veg</h2>
+            <div class="menu">
+                <div class="menu-item">
+                    <img src="image/contact-img.png" alt="Pasta">
+                    <h3>Classic Pasta</h3>
+                    <p>Price: ₹250</p>
+                    <button class="order-button">Order</button>
+                </div>
+                <div class="menu-item">
+                    <img src="image/contact-img.png" alt="Pizza">
+                    <h3>Margherita Pizza</h3>
+                    <p>Price: ₹400</p>
+                    <button class="order-button">Order</button>
+                </div>
+                <div class="menu-item">
+                    <img src="image/contact-img.png" alt="Burger">
+                    <h3>Cheese Burger</h3>
+                    <p>Price: ₹150</p>
+                    <button class="order-button">Order</button>
+                </div>
+                <div class="menu-item">
+                    <img src="image/contact-img.png" alt="Soup">
+                    <h3>Tomato Soup</h3>
+                    <p>Price: ₹100</p>
+                    <button class="order-button">Order</button>
+                </div>
+                <div class="menu-item">
+                    <img src="image/contact-img.png" alt="Salad">
+                    <h3>Caesar Salad</h3>
+                    <p>Price: ₹180</p>
+                    <button class="order-button">Order</button>
+                </div>
+                <div class="menu-item">
+                    <img src="image/contact-img.png" alt="Veg Sandwich">
+                    <h3>Veg Sandwich</h3>
+                    <p>Price: ₹120</p>
+                    <button class="order-button">Order</button>
+                </div>
+                <div class="menu-item">
+                    <img src="image/contact-img.png" alt="Veg Wrap">
+                    <h3>Veg Wrap</h3>
+                    <p>Price: ₹160</p>
+                    <button class="order-button">Order</button>
+                </div>
+                <div class="menu-item">
+                    <img src="image/contact-img.png" alt="Veg Burger">
+                    <h3>Veg Burger</h3>
+                    <p>Price: ₹140</p>
+                    <button class="order-button">Order</button>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Non-Veg Category -->
+        <div class="container non-veg" id="non-veg">
+            <h2 class="name">Non-Veg</h2>
+            <div class="menu">
+                <div class="menu-item">
+                    <img src="image/contact-img.png" alt="Chicken Curry">
+                    <h3>Chicken Curry</h3>
+                    <p>Price: ₹350</p>
+                    <button class="order-button">Order</button>
+                </div>
+                <div class="menu-item">
+                    <img src="image/contact-img.png" alt="Grilled Chicken">
+                    <h3>Grilled Chicken</h3>
+                    <p>Price: ₹450</p>
+                    <button class="order-button">Order</button>
+                </div>
+                <div class="menu-item">
+                    <img src="image/contact-img.png" alt="Fish Fry">
+                    <h3>Fish Fry</h3>
+                    <p>Price: ₹500</p>
+                    <button class="order-button">Order</button>
+                </div>
+                <div class="menu-item">
+                    <img src="image/contact-img.png" alt="Mutton Biryani">
+                    <h3>Mutton Biryani</h3>
+                    <p>Price: ₹550</p>
+                    <button class="order-button">Order</button>
+                </div>
+                <div class="menu-item">
+                    <img src="image/contact-img.png" alt="Prawn Masala">
+                    <h3>Prawn Masala</h3>
+                    <p>Price: ₹600</p>
+                    <button class="order-button">Order</button>
+                </div>
+                <div class="menu-item">
+                    <img src="image/contact-img.png" alt="Chicken Tikka">
+                    <h3>Chicken Tikka</h3>
+                    <p>Price: ₹250</p>
+                    <button class="order-button">Order</button>
+                </div>
+                <div class="menu-item">
+                    <img src="image/contact-img.png" alt="Beef Steak">
+                    <h3>Beef Steak</h3>
+                    <p>Price: ₹650</p>
+                    <button class="order-button">Order</button>
+                </div>
+                <div class="menu-item">
+                    <img src="image/contact-img.png" alt="Lamb Chops">
+                    <h3>Lamb Chops</h3>
+                    <p>Price: ₹700</p>
+                    <button class="order-button">Order</button>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- North Indian Category -->
+        <div class="container north-indian" id="north indian">
+            <h2 class="name">North Indian</h2>
+            <div class="menu">
+                <!-- North Indian menu items here -->
+                <div class="menu-item">
+                    <img src="image/contact-img.png" alt="Butter Chicken">
+                    <h3>Butter Chicken</h3>
+                    <p>Price: ₹250</p>
+                    <button class="order-button">Order</button>
+                </div>
+                <div class="menu-item">
+                    <img src="image/contact-img.png" alt="Paneer Tikka">
+                    <h3>Paneer Tikka</h3>
+                    <p>Price: ₹180</p>
+                    <button class="order-button">Order</button>
+                </div>
+                <div class="menu-item">
+                    <img src="image/contact-img.png" alt="Chole Bhature">
+                    <h3>Chole Bhature</h3>
+                    <p>Price: ₹120</p>
+                    <button class="order-button">Order</button>
+                </div>
+                <div class="menu-item">
+                    <img src="image/contact-img.png" alt="Dal Makhani">
+                    <h3>Dal Makhani</h3>
+                    <p>Price: ₹150</p>
+                    <button class="order-button">Order</button>
+                </div>
+                <div class="menu-item">
+                    <img src="image/contact-img.png" alt="Pasta">
+                    <h3>Pasta</h3>
+                    <p>Price: ₹200</p>
+                    <button class="order-button">Order</button>
+                </div>
+                <div class="menu-item">
+                    <img src="image/contact-img.png" alt="Chowmein">
+                    <h3>Chowmein</h3>
+                    <p>Price: ₹130</p>
+                    <button class="order-button">Order</button>
+                </div>
+                <div class="menu-item">
+                    <img src="image/contact-img.png" alt="Momos">
+                    <h3>Momos</h3>
+                    <p>Price: ₹90</p>
+                    <button class="order-button">Order</button>
+                </div>
+                <div class="menu-item">
+                    <img src="image/contact-img.png" alt="Chicken Chilli">
+                    <h3>Chicken Chilli</h3>
+                    <p>Price: ₹220</p>
+                    <button class="order-button">Order</button>
+                </div>
+                <div class="menu-item">
+                    <img src="image/contact-img.png" alt="Egg Roll">
+                    <h3>Egg Roll</h3>
+                    <p>Price: ₹80</p>
+                    <button class="order-button">Order</button>
+                </div>
+                <div class="menu-item">
+                    <img src="image/contact-img.png" alt="Chat">
+                    <h3>Chat</h3>
+                    <p>Price: ₹60</p>
+                    <button class="order-button">Order</button>
+                </div>
+            </div>
+        </div>
+        <!-- Chinese Category -->
+        <div class="container chinese" id="chinese">
+            <h2 class="name">Chinese</h2>
+            <div class="menu">
+                <div class="menu-item">
+                    <img src="image/contact-img.png" alt="Spring Rolls">
+                    <h3>Spring Rolls</h3>
+                    <p>Price: ₹150</p>
+                    <button class="order-button">Order</button>
+                </div>
+                <div class="menu-item">
+                    <img src="image/contact-img.png" alt="Chili Chicken">
+                    <h3>Chili Chicken</h3>
+                    <p>Price: ₹250</p>
+                    <button class="order-button">Order</button>
+                </div>
+                <div class="menu-item">
+                    <img src="image/contact-img.png" alt="Fried Rice">
+                    <h3>Fried Rice</h3>
+                    <p>Price: ₹180</p>
+                    <button class="order-button">Order</button>
+                </div>
+                <div class="menu-item">
+                    <img src="image/contact-img.png" alt="Sweet and Sour Pork">
+                    <h3>Sweet and Sour Pork</h3>
+                    <p>Price: ₹300</p>
+                    <button class="order-button">Order</button>
+                </div>
+                <div class="menu-item">
+                    <img src="image/contact-img.png" alt="Dim Sum">
+                    <h3>Dim Sum</h3>
+                    <p>Price: ₹220</p>
+                    <button class="order-button">Order</button>
+                </div>
+                <div class="menu-item">
+                    <img src="image/contact-img.png" alt="Noodles">
+                    <h3>Chow Mein Noodles</h3>
+                    <p>Price: ₹200</p>
+                    <button class="order-button">Order</button>
+                </div>
+                <div class="menu-item">
+                    <img src="image/contact-img.png" alt="Kung Pao Chicken">
+                    <h3>Kung Pao Chicken</h3>
+                    <p>Price: ₹280</p>
+                    <button class="order-button">Order</button>
+                </div>
+                <div class="menu-item">
+                    <img src="image/contact-img.png" alt="Hot and Sour Soup">
+                    <h3>Hot and Sour Soup</h3>
+                    <p>Price: ₹150</p>
+                    <button class="order-button">Order</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Italian Category -->
+        <div class="container italian" id="italian">
+            <h2 class="name">Italian</h2>
+            <div class="menu">
+                <div class="menu-item">
+                    <img src="image/contact-img.png" alt="Pasta Alfredo">
+                    <h3>Pasta Alfredo</h3>
+                    <p>Price: ₹350</p>
+                    <button class="order-button">Order</button>
+                </div>
+                <div class="menu-item">
+                    <img src="image/contact-img.png" alt="Lasagna">
+                    <h3>Lasagna</h3>
+                    <p>Price: ₹450</p>
+                    <button class="order-button">Order</button>
+                </div>
+                <div class="menu-item">
+                    <img src="image/contact-img.png" alt="Pizza Margherita">
+                    <h3>Pizza Margherita</h3>
+                    <p>Price: ₹400</p>
+                    <button class="order-button">Order</button>
+                </div>
+                <div class="menu-item">
+                    <img src="image/contact-img.png" alt="Risotto">
+                    <h3>Risotto</h3>
+                    <p>Price: ₹500</p>
+                    <button class="order-button">Order</button>
+                </div>
+                <div class="menu-item">
+                    <img src="image/contact-img.png" alt="Tiramisu">
+                    <h3>Tiramisu</h3>
+                    <p>Price: ₹300</p>
+                    <button class="order-button">Order</button>
+                </div>
+                <div class="menu-item">
+                    <img src="image/contact-img.png" alt="Penne Arrabbiata">
+                    <h3>Penne Arrabbiata</h3>
+                    <p>Price: ₹330</p>
+                    <button class="order-button">Order</button>
+                </div>
+                <div class="menu-item">
+                    <img src="image/contact-img.png" alt="Bruschetta">
+                    <h3>Bruschetta</h3>
+                    <p>Price: ₹250</p>
+                    <button class="order-button">Order</button>
+                </div>
+                <div class="menu-item">
+                    <img src="image/contact-img.png" alt="Carbonara">
+                    <h3>Spaghetti Carbonara</h3>
+                    <p>Price: ₹400</p>
+                    <button class="order-button">Order</button>
+                </div>
+            </div>
+        </div>
+        <!-- Mexican Category -->
+        <div class="container mexican" id="mexican">
+            <h2 class="name">Mexican</h2>
+            <div class="menu">
+                <!-- Mexican menu items here -->
+                <div class="menu-item">
+                    <img src="image/contact-img.png" alt="Burrito">
+                    <h3>Chicken Burrito</h3>
+                    <p>Price: ₹350</p>
+                    <button class="order-button">Order</button>
+                </div>
+                <div class="menu-item">
+                    <img src="image/contact-img.png" alt="Nachos">
+                    <h3>Cheese Nachos</h3>
+                    <p>Price: ₹250</p>
+                    <button class="order-button">Order</button>
+                </div>
+                <div class="menu-item">
+                    <img src="image/contact-img.png" alt="Tacos">
+                    <h3>Beef Tacos</h3>
+                    <p>Price: ₹200</p>
+                    <button class="order-button">Order</button>
+                </div>
+                <div class="menu-item">
+                    <img src="image/contact-img.png" alt="Quesadilla">
+                    <h3>Quesadilla</h3>
+                    <p>Price: ₹280</p>
+                    <button class="order-button">Order</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Continental Category -->
+        <div class="container continental" id="continental">
+            <h2 class="name">Continental</h2>
+            <div class="menu">
+                <!-- Continental menu items here -->
+                <div class="menu-item">
+                    <img src="image/contact-img.png" alt="Fish and Chips">
+                    <h3>Fish and Chips</h3>
+                    <p>Price: ₹450</p>
+                    <button class="order-button">Order</button>
+                </div>
+                <div class="menu-item">
+                    <img src="image/contact-img.png" alt="Steak">
+                    <h3>Grilled Steak</h3>
+                    <p>Price: ₹600</p>
+                    <button class="order-button">Order</button>
+                </div>
+                <div class="menu-item">
+                    <img src="image/contact-img.png" alt="Roast Chicken">
+                    <h3>Roast Chicken</h3>
+                    <p>Price: ₹500</p>
+                    <button class="order-button">Order</button>
+                </div>
+                <div class="menu-item">
+                    <img src="image/contact-img.png" alt="Pasta Primavera">
+                    <h3>Pasta Primavera</h3>
+                    <p>Price: ₹550</p>
+                    <button class="order-button">Order</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Desserts Category -->
+        <div class="container desserts" id="desserts">
+            <h2 class="name">Desserts</h2>
+            <div class="menu">
+                <!-- Desserts menu items here -->
+                <div class="menu-item">
+                    <img src="image/contact-img.png" alt="Chocolate Cake">
+                    <h3>Chocolate Cake</h3>
+                    <p>Price: ₹250</p>
+                    <button class="order-button">Order</button>
+                </div>
+                <div class="menu-item">
+                    <img src="image/contact-img.png" alt="Ice Cream">
+                    <h3>Vanilla Ice Cream</h3>
+                    <p>Price: ₹150</p>
+                    <button class="order-button">Order</button>
+                </div>
+                <div class="menu-item">
+                    <img src="image/contact-img.png" alt="Fruit Salad">
+                    <h3>Fruit Salad</h3>
+                    <p>Price: ₹180</p>
+                    <button class="order-button">Order</button>
+                </div>
+                <div class="menu-item">
+                    <img src="image/contact-img.png" alt="Gulab Jamun">
+                    <h3>Gulab Jamun</h3>
+                    <p>Price: ₹120</p>
+                    <button class="order-button">Order</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Beverages Category -->
+        <div class="container beverages" id="beverages">
+            <h2 class="name">Beverages</h2>
+            <div class="menu">
+                <!-- Beverages menu items here -->
+                <div class="menu-item">
+                    <img src="image/contact-img.png" alt="Coke">
+                    <h3>Coca-Cola</h3>
+                    <p>Price: ₹50</p>
+                    <button class="order-button">Order</button>
+                </div>
+                <div class="menu-item">
+                    <img src="image/contact-img.png" alt="Lemonade">
+                    <h3>Lemonade</h3>
+                    <p>Price: ₹40</p>
+                    <button class="order-button">Order</button>
+                </div>
+                <div class="menu-item">
+                    <img src="image/contact-img.png" alt="Tea">
+                    <h3>Green Tea</h3>
+                    <p>Price: ₹60</p>
+                    <button class="order-button">Order</button>
+                </div>
+                <div class="menu-item">
+                    <img src="image/contact-img.png" alt="Chocolate Lava Cake">
+                    <h3>Chocolate Lava Cake</h3>
+                    <p>Price: ₹350</p>
+                    <button class="order-button">Order</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- South Indian Category -->
+        <div class="container south-indian" id="south indian">
+            <h2 class="name">South Indian</h2>
+            <div class="menu">
+                <!-- South Indian menu items here -->
+                <div class="menu-item">
+                    <img src="image/contact-img.png" alt="Dosa">
+                    <h3>Plain Dosa</h3>
+                    <p>Price: ₹80</p>
+                    <button class="order-button">Order</button>
+                </div>
+                <div class="menu-item">
+                    <img src="image/contact-img.png" alt="Idli">
+                    <h3>Steamed Idli</h3>
+                    <p>Price: ₹60</p>
+                    <button class="order-button">Order</button>
+                </div>
+                <div class="menu-item">
+                    <img src="image/contact-img.png" alt="Sambar">
+                    <h3>Hot Sambar</h3>
+                    <p>Price: ₹70</p>
+                    <button class="order-button">Order</button>
+                </div>
+                <div class="menu-item">
+                    <img src="image/contact-img.png" alt="Vada">
+                    <h3>Medu Vada</h3>
+                    <p>Price: ₹100</p>
+                    <button class="order-button">Order</button>
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <p>&copy; 2024 Upvan Dhaba. All rights reserved. Design By Anurag Singh</p>
+        </div>
+    </footer>
+    <button id="backToTop" onclick="scrollToTop()">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script src="menu.js"></script>
+
+</body>
+
+</html>

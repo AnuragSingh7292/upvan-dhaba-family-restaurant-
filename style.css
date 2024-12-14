@@ -1,0 +1,794 @@
+/* The full-screen loading overlay */
+#loading-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.9);
+    /* white background with opacity */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    /* Ensure it covers the page */
+}
+
+/* The loader circle (loading screen) */
+.loader {
+    border: 6px solid #f3f3f3;
+    /* Light gray */
+    border-top: 6px solid #db3434;
+    /* Blue */
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 2s linear infinite;
+}
+
+/* The rotating loader for the blur effect */
+#blur-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.2);
+    /* Semi-transparent background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9998;
+    /* Below the main loading overlay */
+}
+
+/* Rotating loader during blur effect */
+.blur-loader {
+    border: 8px solid #f3f3f3;
+    /* Light gray */
+    border-top: 8px solid #e74c3c;
+    /* Red color for blur effect */
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 2s linear infinite;
+}
+
+/* Simple spinning animation for loader */
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* Blurring effect */
+.blurred {
+    filter: blur(5px);
+    /* Adds blur */
+    pointer-events: none;
+    /* Disable interaction with blurred content */
+}
+
+/* Global styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background-color: #f4f4f4;
+    color: #333;
+    /* padding-top: 110px; */
+    /*Adjust for fixed header space */
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* Header */
+/* Header */
+.header nav {
+    background-color: #0b213a;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    /* Ensures the logo is on the left and nav on the right */
+    align-items: center;
+    /* Vertically centers items */
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    position: fixed;
+}
+/* Logo */
+.header .logo {
+    font-family: Georgia, serif;
+    color: white;
+    font-size: 40px;
+    font-weight: bold;
+    text-transform: uppercase;
+
+}
+
+/* Navigation */
+.header nav ul {
+    list-style: none;
+    display: flex;
+}
+
+.header nav ul li {
+    margin: 0 10px;
+}
+
+.header nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s;
+}
+
+.header nav ul li a:hover,
+.header nav ul li a.active {
+    font-weight: bold;
+    transition: background-color 0.1s ease 0.1s, color 0.3s ease 0.2s, transform 0.1s ease;
+    transform: scale(1.05);
+}
+
+.header .menu-btn i {
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+    display: none;
+}
+
+#click {
+    display: none;
+}
+
+/* Banner Section */
+.banner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #e44634;
+    color: rgb(255, 255, 255);
+    padding: 40px;
+    text-align: center;
+    padding-top: 135px;
+}
+
+.banner-content {
+    flex: 1;
+    padding: 20px;
+    text-align: left;
+}
+
+.banner-content h1 {
+    /* font-family: 'Shadows Into Light', cursive; */
+    text-shadow: 4px 4px 9px rgba(0, 0, 0, 0.3);
+    animation: fadeIn 3s ease-out;
+    font-size: 36px;
+    font-weight: bold;
+    /* font-family: cursive; */
+    font-style: italic;
+    line-height: 1.3;
+}
+
+/* Confetti Animation */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.banner-content p {
+    font-family: "Gill Sans", sans-serif;
+    font-size: 18px;
+    margin-top: 20px;
+    line-height: 1.5;
+    animation: fadeIn 3s ease-out;
+}
+
+.banner-img {
+    flex: 1;
+    padding: 20px;
+    text-align: right;
+}
+
+.banner-img img {
+
+    max-width: 80%;
+    height: auto;
+    border-radius: 8px;
+}
+
+/* About Section */
+
+.about {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px;
+}
+
+.about-img img {
+    width: 80%;
+    border-radius: 20px 20px 20px 20px;
+    /* Top-right and bottom-left rounded */
+    box-sizing: border-box;
+    /* Ensure padding doesn't affect border-radius */
+    padding: 0;
+    /* Remove padding from the image itself */
+}
+
+.about-content {
+    width: 45%;
+}
+
+.about-content h2 {
+    font-size: 30px;
+    color: #e74c3c;
+    margin-bottom: 20px;
+}
+
+.about-content p {
+    font-size: 18px;
+    line-height: 1.6;
+    text-align: justify;
+    color: #333;
+}
+
+.about-content a {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    color: #fff;
+    background-color: #e74c3c;
+    font-weight: bold;
+    font-size: 16px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+/* Hover effect for better interactivity */
+.about-content a:hover {
+    background-color: #c0392b;
+    transform: scale(1.05);
+}
+
+/* Menu Section */
+
+.menu {
+    box-shadow: 0 4px 8px #dedede;
+    background-color: #ebeff0;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 4px 3px 8px rgb(177, 177, 177);
+}
+
+.menu .info {
+    font-size: 18px;
+    color: red;
+    text-align: right;
+    font-family: "Gill Sans", sans-serif;
+}
+
+.menu h2 {
+    font-family: 'Shadows Into Light', cursive;
+    font-size: 40px;
+    color: #2c3e50;
+    margin-bottom: 20px;
+}
+
+.menu .menu-items {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.menu .menu-items .menu-item {
+    width: 200px;
+    margin: 20px;
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    cursor: pointer;
+}
+
+.menu .menu-items .menu-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.menu .menu-items .menu-item h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.menu .menu-items .menu-item p {
+    font-size: 18px;
+    color: #e74c3c;
+}
+
+/* Gallery Section */
+.gallery {
+    padding: 15px;
+    background-color: #fff;
+    text-align: center;
+    box-shadow: 3px 3px 7px rgb(152, 151, 151);
+}
+
+.gallery h2 {
+    font-family: 'Shadows Into Light', cursive;
+    font-size: 40px;
+    margin-bottom: 35px;
+    color: #2c3e50;
+
+}
+
+.gallery-grid {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    flex-wrap: wrap;
+
+}
+
+.gallery-grid img {
+    width: 20%;
+    height: 300px;
+    border-radius: 8px;
+    transition: transform 0.3s;
+}
+
+.gallery-grid img:hover {
+    transform: scale(1.05);
+}
+
+/* Contact Section */
+
+.contact {
+    background-color: #ecf0f1;
+    padding: 40px;
+    text-align: left;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 0px;
+    /* Removes additional spacing between elements */
+}
+
+.contact>div {
+    flex: 1;
+    /* Ensures equal width for all three sections */
+    margin: 0;
+    /* Removes any default margin that could cause gaps */
+    padding: 10px;
+    /* Optional: Adjust for internal spacing */
+}
+
+.contact .DhabaImage img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.contact .addres,
+.response {
+    padding-top: 50px;
+    /* background-color: red; */
+    /* width: 300px;
+    height: 200px; */
+}
+
+.contact h2 {
+    font-family: cursive;
+    font-size: 32px;
+    margin-bottom: 20px;
+    color: #2c3e50;
+}
+
+.contact p {
+    text-align: left;
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 10px;
+    line-height: 1.6;
+}
+
+.contact form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+.contact label {
+    font-size: 18px;
+    text-align: left;
+    width: 100%;
+}
+
+.contact input,
+.contact textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    margin-bottom: 10px;
+}
+
+.contact button {
+    background-color: #2c3e50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.contact button:hover {
+    background-color: #3498db;
+}
+
+/* Footer */
+.footer {
+    background-color: #2c3e50;
+    color: white;
+    padding: 20px;
+    display: flex;
+    text-align: center;
+}
+
+.footer .footer-content {
+    flex: 1;
+    justify-content: center;
+    margin-left: 8vw;
+}
+
+.footer .social-icons {
+    padding-right: 48px;
+}
+
+.footer .social-icons a {
+    flex: 1;
+    justify-content: right;
+    color: white;
+    margin: 0 6px;
+    font-size: 24px;
+    transition: color 0.3s;
+    text-decoration: none;
+}
+
+.footer .social-icons a:hover {
+    color: #3498db;
+}
+
+
+#backToTop {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #ed1c24;
+    color: white;
+    border: none;
+    border-radius: 50px;
+    padding: 10px 15px;
+    font-size: 16px;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    display: none;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+#backToTop:hover {
+    background-color: #34495e;
+}
+
+#backToTop.show {
+    display: block;
+    /* Show when user scrolls */
+    opacity: 1;
+    transform: scale(1);
+}
+
+#backToTop.hide {
+    opacity: 0;
+    transform: scale(0.9);
+}
+
+@media only screen and (max-width: 930px) {
+    .banner {
+        padding-top: 120px;
+    }
+
+    .header .logo {
+        font-size: 35px;
+    }
+
+    nav ul{
+        top: 100px;
+    }
+}
+
+@media only screen and (max-width: 867px) {
+    .banner {
+        padding-top: 150px;
+    }
+
+    .header .logo {
+        font-size: 35px;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .header .logo {
+        font-size: 34px;
+        /* background-color: red; */
+        margin-right: 30px;
+    }
+
+    /* humbars bar */
+    nav ul {
+        position: fixed;
+        top: 85px;
+        left: -1000px;
+        background: linear-gradient(to right, #ffffff, #f4f2f2, #e6e1e1);
+        height: auto;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        padding: 10px;
+        /* Optional padding for better spacing */
+        transition: all 0.5s ease-in-out;
+        
+    }
+
+    nav ul li {
+        border-bottom: 1px solid rgb(191, 225, 194);
+        margin: 20px 0;
+        /* Adds space between each item in the list */
+    }
+
+    nav ul li a {
+        color: rgb(0, 0, 0) !important;
+        /* Base color */
+        float: left;
+        font-size: 22px;
+        display: block;
+        padding: 15px 20px;
+        /* Adds padding to increase the clickable area */
+        text-decoration: none;
+    }
+    .header nav ul li a.active{
+        color: red !important;
+    }
+    .header .menu-btn i {
+        display: block;
+    }
+
+    #click:checked~ul {
+        left: 0;
+    }
+
+    #click:checked~.menu-btn i::before {
+        content: "\f00d";
+    }
+
+
+    /* banner  */
+    .banner {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 10px;
+        text-align: center;
+        padding-top: 150px;
+    }
+
+    .banner-content h1 {
+        font-size: 38px;
+        text-align: center;
+    }
+
+    .banner-content p {
+        font-size: 18px;
+        text-align: justify;
+
+    }
+
+    .banner-img {
+        text-align: center;
+    }
+
+    .banner-img img {
+
+        max-width: 100%;
+        height: auto;
+    }
+
+    /* About Section */
+    .about {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 40px;
+    }
+
+    .about-img img {
+        width: 100%;
+        border-radius: 20px;
+        box-sizing: border-box;
+        margin-bottom: 40px;
+    }
+
+    .about-content {
+        width: 100%;
+    }
+
+    .about-content h2 {
+        font-size: 30px;
+        color: #e74c3c;
+        margin-bottom: 20px;
+    }
+
+    /* Menu Section */
+    .menu {
+        padding: 20px;
+    }
+
+    .menu h2 {
+        text-align: left;
+        margin-left: 20px;
+        font-family: 'Arial', sans-serif;
+        font-size: 30px;
+        color: #e74c3c;
+    }
+
+    .menu .menu-items .menu-item {
+        width: 40%;
+        margin: 10px;
+        padding: 10px;
+    }
+
+    .menu .menu-items .menu-item h3 {
+        font-size: 19px;
+    }
+
+    /* Gallery Section */
+    .gallery {
+        padding: 10px;
+    }
+
+    .gallery h2 {
+        text-align: left;
+        margin-left: 30px;
+        font-family: 'Arial', sans-serif;
+        font-size: 30px;
+        color: #e74c3c;
+
+    }
+
+    .gallery-grid {
+        gap: 30px;
+        margin-bottom: 20px;
+    }
+
+    .gallery-grid img {
+        width: 40%;
+        height: 170px;
+    }
+
+    /* Contact Section */
+    .contact {
+        padding: 20px;
+        flex-direction: column;
+    }
+
+    .contact .response {
+        margin-top: 20px;
+    }
+
+    .contact .addres h2 {
+        font-size: 40px;
+        font-weight: bold;
+    }
+
+    .contact .response h2 {
+        font-weight: bold;
+    }
+
+
+    /* Footer */
+    .footer {
+        padding: 20px 5px 0 0;
+        display: flex;
+        flex-direction: column;
+        /* Stack elements vertically */
+        align-items: center;
+        /* Center all content */
+        text-align: center;
+        margin-left: 0px;
+    }
+
+    .footer .footer-content {
+        margin-left: 20px;
+    }
+
+    .footer .social-icons {
+        margin: 13px 0;
+    }
+
+    .footer .social-icons {
+        padding-right: 0;
+    }
+
+    /* controling hover  effect */
+
+    #backToTop:hover {
+        background-color: #ed1c24;
+    }
+
+    .footer .social-icons a:hover {
+        color: white;
+    }
+
+    .contact button:hover {
+        background-color: #2c3e50;
+    }
+
+}
+
+@media only screen and (max-width:530px) 
+{
+    nav ul{
+        top: 130px;
+    }
+}
+
+@media only screen and (max-width: 330px) {
+    .banner {
+        padding-top: 150px;
+    }
+
+    .header .logo {
+        font-size: 30px;
+    }
+    nav ul{
+        top: 118px;
+    }
+
+}
+
+@media only screen and (max-width: 270px) {
+    nav ul{
+        top: 158px;
+    }
+}
+
+
+@media only screen and (max-width: 160px) {
+    nav ul{
+        top: 196px;
+    }
+}
