@@ -55,7 +55,7 @@ document.addEventListener('DOMContentLoaded', () => {
         else {
             document.getElementById('order-price').innerText = `₹${price}`;
         }
-        document.getElementById('hidden-totalPrice').value = totalPrice + 40;
+        document.getElementById('hidden-totalPrice').value = totalPrice + 30;
     });
 
 
@@ -89,7 +89,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         swal.fire({
             title: "Remember your id number. Wait for call verification!!!",
-            html: `Your token number is: ${"upvandhaba"+tokenNumber} <br> Your total price is: ₹${totalPrice + 40}`,
+            html: `Your token number is: ${"upvandhaba"+tokenNumber} <br> Your total price is: ₹${totalPrice + 30}`,
             icon: "success",
             button: "OK",
         }).then(() => {
